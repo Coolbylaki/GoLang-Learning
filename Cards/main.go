@@ -8,5 +8,5 @@ func main() {
 	hand, _ := deal(5, deck)
 
 	// Write to file
-	hand.writeToFile()
+	hand.writeToFile("currentHand")
 }

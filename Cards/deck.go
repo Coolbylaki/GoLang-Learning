@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"os"
 	"strings"
@@ -40,6 +41,8 @@ func (d deck) toString() string {
 	return strings.Join([]string(d), "\n")
 }
 
-func (d deck) writeToFile() {
-	os.WriteFile("CurrentHand", []byte(d.toString()), 0666)
+func (d deck) writeToFile(filename string) error {
+	os.WriteFile(filename, []byte(d.toString()), 0666)
+
+	return errors.New("Write to file failed!")
 }
