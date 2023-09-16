@@ -2,9 +2,6 @@ package main
 
 import "fmt"
 
-/* Create a new type of deck
-which is a slice of strings */
-
 type deck []string
 
 func newDeck() deck {
@@ -20,6 +17,13 @@ func newDeck() deck {
 	}
 
 	return cards
+}
+
+func deal(handSize int, d deck) (deck, deck) {
+	hand := d[:handSize]
+	remainingHand := d[handSize:]
+
+	return hand, remainingHand
 }
 
 func (d deck) print() {
