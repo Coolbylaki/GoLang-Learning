@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	// Make the deck
 	deck := newDeck()
@@ -9,4 +11,9 @@ func main() {
 
 	// Write to file
 	hand.writeToFile("currentHand")
+
+	// Read deck from file
+	newDeck := newDeckFromFile("my")
+
+	fmt.Println(newDeck)
 }
