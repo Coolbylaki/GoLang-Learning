@@ -24,9 +24,10 @@ func main() {
 	}
 
 	// Pointer
-	alexPointer := &alex
+	// alexPointer := &alex
 
-	alexPointer.updateName("Jimmy")
+	// Shortcut
+	alex.updateName("Jimmy")
 	alex.printDetails()
 }
 
